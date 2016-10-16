@@ -33,11 +33,10 @@ ActiveRecord::Schema.define(version: 20161014145150) do
     t.string   "cut"
     t.integer  "price"
     t.string   "img_url"
-    t.integer  "retailer_id"
+    t.integer  "retailer_id", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["retailer_id"], name: "index_rings_on_retailer_id", using: :btree
   end
 
-  add_foreign_key "rings", "retailers"
 end

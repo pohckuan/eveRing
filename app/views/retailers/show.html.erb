@@ -1,2 +1,23 @@
-<h1>Retailers#show</h1>
-<p>Find me in app/views/retailers/show.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> <%=@retailer.name%></title>
+  </head>
+  <body>
+    <h1>Interested in selling your products here?</h1>
+    <h1><%=@retailer.name%></h1>
+    <% @retailer.rings.each do |ring| %>
+    <img src ="<%= ring.img_url %>">
+    <%= ring.shape %>
+    <%=ring.description%>
+    <%end%>
+    <div>
+      <%= @retailer.name %>
+      <%= @retailer.phone %>
+      <%= @retailer.address %>
+    </div>
+    <%= link_to 'Click here to add product', new_retailer_ring_path(@retailer) %>
+
+  </body>
+</html>

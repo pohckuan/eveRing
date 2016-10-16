@@ -1,2 +1,8 @@
-<h1>Rings#show</h1>
-<p>Find me in app/views/rings/show.html.erb</p>
+<!-- <h1>Rings#show</h1>
+<p>Find me in app/views/rings/show.html.erb</p> -->
+
+<%=@ring.description %>
+<%=@ring.carat %>
+<%=@ring.color%>
+<%=@ring.cut %>
+<%= "$ " + @ring.price.to_s %>

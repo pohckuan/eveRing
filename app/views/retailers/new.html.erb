@@ -1,2 +1,28 @@
-<h1>Retailers#new</h1>
-<p>Find me in app/views/retailers/new.html.erb</p>
+<h1>Become One of US!</h1>
+
+<%= form_for @retailer do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+</p>
+
+<p>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+</p>
+
+<p>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url%>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<%end%>

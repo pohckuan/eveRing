@@ -9,7 +9,7 @@ class CreateRings < ActiveRecord::Migration[5.0]
       t.string :cut
       t.integer :price
       t.string :img_url
-      t.references :retailer, foreign_key: true
+      t.references :retailer, null:false, index:true
 
       t.timestamps
     end
