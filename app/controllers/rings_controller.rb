@@ -31,6 +31,12 @@ class RingsController < ApplicationController
     @ring = Ring.find(params[:id])
   end
 
+  def destroy
+    @ring = Ring.find(params[:id])
+    @ring.destroy
+    redirect_to retailer_path(@retailer)
+  end
+
   private
   def ring_params
     params.require(:ring).permit(:shape, :description, :carat, :clarity, :color, :cut, :price, :img_url)

@@ -8,10 +8,10 @@
 Retailer.destroy_all
 Ring.destroy_all
 
-tiffany = Retailer.create({name:"Tiffany & Co", img_url:"http://i.forbesimg.com/media/lists/companies/tiffany-co_416x416.jpg", phone:"(301) 657-8777", address:"The Collection at Chevy Chase, 5481 Wisconsin Ave, Chevy Chase, MD 20815"})
-costco = Retailer.create({name:"Costco Wholesale", img_url:"http://www.costco.com/wcsstore/CostcoGLOBALSAS/images/Costco_Logo-1.png",phone:" (202) 269-8540", address:"2441 Market St NE, Washington, DC 20018"})
-zales = Retailer.create({name:"Zales", img_url:"https://www.pehub.com/wp-content/uploads/zales-diamond-1.jpg",phone:"(703) 415-5415", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202" } )
-helzberg = Retailer.create({name:"Helzberg Diamond", img_url:"http://images.taubman.com/www.shoptwelveoaks.com/asset/get/10788",phone:"(703) 415-2440", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202"} )
+tiffany = Retailer.create({name:"Tiffany & Co", password:"123456", img_url:"http://i.forbesimg.com/media/lists/companies/tiffany-co_416x416.jpg", phone:"(301) 657-8777", address:"The Collection at Chevy Chase, 5481 Wisconsin Ave, Chevy Chase, MD 20815"})
+costco = Retailer.create({name:"Costco Wholesale",password:"123456", img_url:"http://www.costco.com/wcsstore/CostcoGLOBALSAS/images/Costco_Logo-1.png",phone:" (202) 269-8540", address:"2441 Market St NE, Washington, DC 20018"})
+zales = Retailer.create({name:"Zales",password:"123456", img_url:"https://www.pehub.com/wp-content/uploads/zales-diamond-1.jpg",phone:"(703) 415-5415", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202" } )
+helzberg = Retailer.create({name:"Helzberg Diamond",password:"123456", img_url:"http://images.taubman.com/www.shoptwelveoaks.com/asset/get/10788",phone:"(703) 415-2440", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202"} )
 
 
 a= Ring.create({shape:"Oval", description:"Oval Cut Diamond Platinum Solitaire Ring", carat:4.50, color:"H", clarity:"VS1", cut:"N/A", price:99999.99, img_url:"http://richmedia.channeladvisor.com/ImageDelivery/imageService?profileId=12026540&id=864649&recipeId=649", retailer:costco})

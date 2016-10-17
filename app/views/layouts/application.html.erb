@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <nav>
+      <% if @current_user %>
+        <%= link_to "Welcome, #{@current_user.name}!", retailer_path(@current_user) %>
+        <%= link_to "Sign Out", session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign Up", new_retailer_path %>
+        <%= link_to "Sign In", new_session_path %>
+      <% end %>
+
+      <%= link_to "Retailers", retailers_path %>
+<%= link_to "Rings", rings_path %>
+
+
+        <% flash.each do |type, message| %>
+        <span class="<%= type %>"> <%= message %> </span>
+        <%end%>
+
+    </nav>
     <%= yield %>
   </body>
 </html>

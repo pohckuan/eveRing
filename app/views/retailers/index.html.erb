@@ -4,7 +4,7 @@
 <%= link_to 'View all products', rings_path %>
 <% @retailers.each do |retailer| %>
 <%= link_to retailer.name, retailer_path(retailer)%>
-<%= link_to 'Edit', edit_retailer_path(retailer)%>
-<%= link_to 'Delete', retailer_path(retailer), method: :delete, data:{confirm:'Are You Sure?'} %>
+ <%= link_to "Edit", edit_retailer_path(retailer) if @current_user %>
+ <%= link_to 'Delete', retailer_path(retailer), method: :delete, data:{confirm:'Are You Sure?'} if @current_user %>
 <img src="<%= retailer.img_url %>">
 <%end%>

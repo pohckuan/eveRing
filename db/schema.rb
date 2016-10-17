@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20161014145150) do
 
   create_table "retailers", force: :cascade do |t|
     t.string   "name"
+    t.string   "password"
     t.string   "phone"
     t.string   "address"
     t.string   "img_url"

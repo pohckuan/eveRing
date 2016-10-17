@@ -8,6 +8,13 @@
   <body>
     <h1>Welcome#index</h1>
     <h2><%= link_to 'View Our Retailers', retailers_path%> </h2>
+    <!-- <% if @current_user %>
+  <%= link_to "Welcome, #{@current_user.name}!", retailer_path(@current_user) %>
+  <%= link_to "Sign Out", session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign In", new_session_path %>
+<% end %> -->
+
 
   </body>
 </html>

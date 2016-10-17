@@ -6,3 +6,5 @@
 <%=@ring.color%>
 <%=@ring.cut %>
 <%= "$ " + @ring.price.to_s %>
+<%= link_to "Edit", edit_retailer_ring_path if @current_user %>
+<%= link_to "Delete", ring_path(@ring), method: :delete, data:{confirm:'Are you sure?'} if @current_user %>

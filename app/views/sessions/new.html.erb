@@ -1,0 +1,10 @@
+<h2>Sign In</h2>
+<%= form_for @retailer, url: session_path, method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Submit" %>
+<% end %>
