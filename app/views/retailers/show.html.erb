@@ -31,8 +31,9 @@
       height: 263px;
       width: 263px;
       background-size: contain;
-    display: block;
+    display: inline-block;
     max-width: 100%;
+    align-content: center;
   }
 
     </style>
@@ -46,12 +47,10 @@
     <div class="parent">
       <div  class="item">
     <% @retailer.rings.each do |ring| %>
-    <%= link_to ring.shape, retailer_ring_path(@retailer, ring)%>
-    <img src ="<%= ring.img_url %>" class="ring">
+    <img src= "<%= ring.img_url%>" class="ring">
   </div>
   </div>
-    <!-- <%= ring.shape %>
-    <%=ring.description%> -->
+    <%=ring.description%>
     <%end%>
     <div>
       <%= @retailer.name %>
