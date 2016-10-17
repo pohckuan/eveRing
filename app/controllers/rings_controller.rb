@@ -10,6 +10,15 @@ class RingsController < ApplicationController
 
 
   def edit
+    @retailer = Retailer.find(params[:retailer_id])
+    @ring = Ring.find(params[:id])
+  end
+
+  def update
+    @retailer = Retailer.find(params[:retailer_id])
+    @ring = Ring.find(params[:id])
+    @ring.update(ring_params)
+    redirect_to retailer_path(@retailer)
   end
 
   def create

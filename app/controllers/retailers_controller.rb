@@ -23,7 +23,13 @@ end
   def update
     @retailer = Retailer.find(params[:id])
     @retailer.update(retailer_params)
-    redirect_to retailer_path(retailer)
+    redirect_to retailer_path(@retailer)
+  end
+
+  def destroy
+    @retailer = Retailer.find(params[:id])
+    @retailer.destroy
+    redirect_to retailers_path
   end
 
 private

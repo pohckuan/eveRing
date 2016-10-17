@@ -2,5 +2,5 @@
 
 <% @rings.each do |ring| %>
 <img src="<%= ring.img_url%>">
-<%= link_to ring.description, ring_path(ring) %>
+<%= link_to ring.shape, ring_path(ring) %>
 <%end%>

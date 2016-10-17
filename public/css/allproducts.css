@@ -1,0 +1,6 @@
+div {
+  display: flex;
+  height,width: 263px;
+  justify-content: space-between;
+  align-items: center;
+}

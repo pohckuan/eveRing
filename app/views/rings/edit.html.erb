@@ -1,2 +1,50 @@
-<h1>Rings#edit</h1>
-<p>Find me in app/views/rings/edit.html.erb</p>
+<h1>Update Ring Details</h1>
+
+<%= form_for [@retailer,@ring] do |f| %>
+<p>
+  <%= f.label :shape %>
+  <%= f.text_field :shape %>
+</p>
+
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</p>
+
+<p>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+</p>
+
+<p>
+  <%= f.label :carat %>
+  <%= f.text_field :carat %>
+</p>
+
+
+<p>
+  <%= f.label :clarity %>
+  <%= f.text_field :clarity%>
+</p>
+
+<p>
+  <%= f.label :cut %>
+  <%= f.text_field :cut%>
+</p>
+
+<p>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+</p>
+
+<p>
+  <%= f.label :img_url%>
+  <%= f.text_field :img_url %>
+</p>
+
+
+<p>
+  <%= f.submit %>
+</p>
+
+<%end%>

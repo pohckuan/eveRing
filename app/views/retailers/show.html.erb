@@ -3,14 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title> <%=@retailer.name%></title>
+    <style>
+    body {
+      position:relative;
+      text-align: center;
+      width:989px;
+      font-family:'Sterling SSm A','Sterling SSm B',serif;
+    }
+
+    .company{
+      text-align: center;
+      font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 150%;
+    font-style: normal;
+    }
+    .parent {
+      margin: 0 auto;
+      max-width: 980px;
+      padding: 0 1rem;
+    }
+    .banner {
+      width: 984px;
+      height: 279px;
+    }
+    .ring{
+      height: 263px;
+      width: 263px;
+      background-size: contain;
+    display: block;
+    max-width: 100%;
+  }
+
+    </style>
   </head>
   <body>
-    <h1>Interested in selling your products here?</h1>
-    <h1><%=@retailer.name%></h1>
+    <h2 class="company"><%=@retailer.name.upcase%></h2>
+    <div class="banner">
+    <img src = "http://www.tiffany.com/shared/images/engagement/engagement-browse-1x.jpg">
+  </div>
+  <p>any text</p>
+    <div class="parent">
+      <div  class="item">
     <% @retailer.rings.each do |ring| %>
-    <img src ="<%= ring.img_url %>">
-    <%= ring.shape %>
-    <%=ring.description%>
+    <%= link_to ring.shape, retailer_ring_path(@retailer, ring)%>
+    <img src ="<%= ring.img_url %>" class="ring">
+  </div>
+  </div>
+    <!-- <%= ring.shape %>
+    <%=ring.description%> -->
     <%end%>
     <div>
       <%= @retailer.name %>
