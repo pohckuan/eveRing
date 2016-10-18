@@ -1,3 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <style>
+  nav{
+    background-color:grey;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li{
+    float: right;
+  }
+  </style>
+  </head>
+  <body>
+    <div>
+      <img src="http://www.moissanitebridal.com/store/graphics/00000002/engagement-ring-banner.jpg">
+    </div>
+    <nav>
+      <ul>
+        <li><%=link_to 'View All Products', rings_path%></li>
+      </ul>
+    </nav>
+    <h1>Jewelries Retailers</h1>
+    <%= link_to "Fill out the form to become one of the retailers", new_retailer_path %>
+
+    <% @retailers.each do |retailer| %>
+    <%= link_to retailer.name, retailer_path(retailer)%>
+    <img src="<%= retailer.img_url %>">
+     <%= link_to "Edit", edit_retailer_path(retailer) if @current_user %>
+     <%= link_to 'Delete', retailer_path(retailer), method: :delete, data:{confirm:'Are You Sure?'} if @current_user %>
+    <%end%>
+  </body>
+</html>
+
 <h1>Jewelries Retailers</h1>
 <%= link_to "Fill out the form to become one of the retailers", new_retailer_path %>
 

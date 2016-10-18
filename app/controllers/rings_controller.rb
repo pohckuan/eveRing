@@ -1,4 +1,8 @@
 class RingsController < ApplicationController
+  
+  def show
+    @ring = Ring.find(params[:id])
+  end
   def index
     @rings = Ring.all
   end
@@ -27,11 +31,9 @@ class RingsController < ApplicationController
     redirect_to retailer_path(@retailer)
   end
 
-  def show
-    @ring = Ring.find(params[:id])
-  end
 
   def destroy
+    @retailer = Retailer.find(params[:retailer_id])
     @ring = Ring.find(params[:id])
     @ring.destroy
     redirect_to retailer_path(@retailer)

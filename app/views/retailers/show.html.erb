@@ -36,9 +36,10 @@
       padding: 0 1rem;
     }
     .banner {
-      width: 990px;
-      height: 300px;
-      background-image: url("http://www.tiffany.com/shared/images/engagement/engagement-browse-1x.jpg");
+      width: 980px;
+      height: 200px;
+      background-image: url("http://www.offersforengagementrings.com/wp-content/uploads/2015/01/cropped-ExhibID_296_super_banner.jpg");
+      background-size: cover;
       text-align: center;
       padding: 20px;
       border-top: 1px solid black;
@@ -76,7 +77,8 @@
     <%= link_to "Edit", edit_retailer_ring_path(@retailer,ring)%>
     <%= link_to "Delete", retailer_path(@retailer), method: :delete, data:{confirm:"Are you sure? Item Sold?"} %> -->
     <%= link_to image_tag(ring.img_url, class:"ring"), retailer_ring_path(@retailer,ring) %>
-    <!-- <%=ring.description%> -->
+    <%= link_to 'Edit', edit_retailer_ring_path(@retailer) if @current_user%>
+    <%= link_to 'Delete', retailer_ring_path(@retailer, ring), method: :delete, data:{confirm:'Are you sure?'} if @current_user%>
     <%end%>
 
     <div>
