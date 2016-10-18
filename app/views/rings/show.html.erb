@@ -9,16 +9,17 @@
     table{
       width: 400px;
       vertical-align: middle;
+      margin-top: 20px;
+      font-size: 20px;
     }
     body{
       position: relative;
       width: 1000px;
       text-align: center;
-      background-color: coral;
       margin:auto;
     }
     img{
-      width: 400px;
+      width: 500px;
       height:500px;
       background-size: contain;
     }
@@ -30,7 +31,10 @@
     }
     td,th{
       width:100px;
+      text-align: left;
     }
+
+
     .banner{
       background-image: url("http://diamonius.com/media/wysiwyg/Diamonius_Synthetic_Diamond_Banner_1.jpg");
       font-size: 35px;
@@ -41,23 +45,35 @@
       width:400px;
       display: flex;
       flex-wrap: nowrap;
+      margin-top: 65px;
+      margin-bottom: 100px;
     }
     .description{
       width:400px;
       text-align: center;
+      border-bottom: 1px solid black;
+      padding: 20px;
     }
 
     .shape{
       width: 400px;
       text-align: center;
       font-size: 30px;
+      margin: 10px;
     }
     .contact{
-      text-align: center;
+      background-color: #55ffff;
+      align-content: : center;
       font-size: 15px;
       width: 100px;
-      height:50px;
+      height:42px;
       border: 1px solid silver;
+      margin-left: 90px;
+      margin-top: 60px;
+    }
+    h3{
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
     </style>
   </head>
@@ -79,13 +95,18 @@
   <table>
   <tr>
       <th>Price:</th>
-      <td><%='$' + @ring.price.to_s%></td>
+      <td><%= number_to_currency(@ring.price)%></td>
     </tr>
 
 <tr>
   <th>Carat Weight:</th>
-  <td><%=@ring.carat%></td>
+  <td><%=@ring.carat.to_f%></td>
 </tr>
+<tr>
+  <th>Clarity:</th>
+  <td><%=@ring.clarity%></td>
+</tr>
+
 <tr>
   <th>Color:</th>
   <td><%=@ring.color%></td>
@@ -94,9 +115,8 @@
   <th>Cut:</th>
   <td><%=@ring.cut%></td>
 </tr>
-
   </table>
-  <div class="contact"> <h3>Contact Store</h3> </div>
+  <div class="contact"> Contact</div>
 
 </div>
   </body>
