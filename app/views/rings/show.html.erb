@@ -1,8 +1,103 @@
 <!-- <h1>Rings#show</h1>
 <p>Find me in app/views/rings/show.html.erb</p> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    table{
+      width: 400px;
+      vertical-align: middle;
+    }
+    body{
+      position: relative;
+      width: 1000px;
+      text-align: center;
+      background-color: coral;
+      margin:auto;
+    }
+    img{
+      width: 400px;
+      height:500px;
+      background-size: contain;
+    }
+    .details{
+      text-align: center;
+      width: 400px;
+      height:500px;
 
-<%=@ring.description %>
-<%=@ring.carat %>
-<%=@ring.color%>
-<%=@ring.cut %>
-<%= "$ " + @ring.price.to_s %>
+    }
+    td,th{
+      width:100px;
+    }
+    .banner{
+      background-image: url("http://diamonius.com/media/wysiwyg/Diamonius_Synthetic_Diamond_Banner_1.jpg");
+      font-size: 35px;
+      height:250px;
+    }
+    .box{
+      height:500px;
+      width:400px;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .description{
+      width:400px;
+      text-align: center;
+    }
+
+    .shape{
+      width: 400px;
+      text-align: center;
+      font-size: 30px;
+    }
+    .contact{
+      text-align: center;
+      font-size: 15px;
+      width: 100px;
+      height:50px;
+      border: 1px solid silver;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="banner"> Find Your Perfect ring </div>
+    <div class="box">
+
+    <div class="image">
+    <img src="<%=@ring.img_url%>">
+    </div>
+    <div class="details">
+      <div class="shape">
+    <%= @ring.shape%>
+  </div>
+    <div class="description">
+    <%=@ring.description %>
+  </div>
+  <table>
+  <tr>
+      <th>Price:</th>
+      <td><%='$' + @ring.price.to_s%></td>
+    </tr>
+
+<tr>
+  <th>Carat Weight:</th>
+  <td><%=@ring.carat%></td>
+</tr>
+<tr>
+  <th>Color:</th>
+  <td><%=@ring.color%></td>
+</tr>
+<tr>
+  <th>Cut:</th>
+  <td><%=@ring.cut%></td>
+</tr>
+
+  </table>
+  <div class="contact"> <h3>Contact Store</h3> </div>
+
+</div>
+  </body>
+</html>

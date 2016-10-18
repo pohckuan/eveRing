@@ -9,8 +9,8 @@ Retailer.destroy_all
 Ring.destroy_all
 
 tiffany = Retailer.create({name:"Tiffany & Co", password:"123456", img_url:"http://i.forbesimg.com/media/lists/companies/tiffany-co_416x416.jpg", phone:"(301) 657-8777", address:"The Collection at Chevy Chase, 5481 Wisconsin Ave, Chevy Chase, MD 20815"})
-costco = Retailer.create({name:"Costco Wholesale",password:"123456", img_url:"http://www.costco.com/wcsstore/CostcoGLOBALSAS/images/Costco_Logo-1.png",phone:" (202) 269-8540", address:"2441 Market St NE, Washington, DC 20018"})
-zales = Retailer.create({name:"Zales",password:"123456", img_url:"https://www.pehub.com/wp-content/uploads/zales-diamond-1.jpg",phone:"(703) 415-5415", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202" } )
+costco = Retailer.create({name:"Costco Wholesale",password:"123456", img_url:"https://mgtvwbay.files.wordpress.com/2015/02/costco-logo-hd-340x250-newbug.jpg",phone:" (202) 269-8540", address:"2441 Market St NE, Washington, DC 20018"})
+zales = Retailer.create({name:"Zales",password:"123456", img_url:"http://vectorlogofree.com/wp-content/uploads/2012/11/zales-vector-logo-400x400.png",phone:"(703) 415-5415", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202" } )
 helzberg = Retailer.create({name:"Helzberg Diamond",password:"123456", img_url:"http://images.taubman.com/www.shoptwelveoaks.com/asset/get/10788",phone:"(703) 415-2440", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202"} )
 
 
