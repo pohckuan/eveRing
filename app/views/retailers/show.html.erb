@@ -91,6 +91,9 @@
   </div>
   <h2 id="title">
       Solitaire<br>
+      <%= link_to 'Edit', edit_retailer_path(@retailer) if @current_user == @retailer%>
+      <%= link_to 'Delete', retailer_path(@retailer), method: :delete, data:{confirm:'Are you sure?'} if @current_user == @retailer%>
+
       <%= link_to 'Click here to add product', new_retailer_ring_path(@retailer) if @current_user == @retailer %>
     </h2>
     <% @retailer.rings.each do |ring| %>
@@ -98,8 +101,6 @@
       <%= link_to image_tag(ring.img_url, class:"ring"), retailer_ring_path(@retailer,ring) %>
       <%if @current_user == @retailer %>
       <div class="links">
-      <%= link_to 'Edit', edit_retailer_ring_path(@retailer) if @current_user%>
-      <%= link_to 'Delete', retailer_ring_path(@retailer, ring), method: :delete, data:{confirm:'Are you sure?'} if @current_user%>
     </div>
       <%end%>
     </div>

@@ -15,15 +15,16 @@ class RingsController < ApplicationController
 
 
   def edit
-    @retailer = Retailer.find(params[:retailer_id])
     @ring = Ring.find(params[:id])
+    # @retailer = Retailer.find(params[:retailer_id])
+    @retailer=@ring.retailer
   end
 
   def update
     @retailer = Retailer.find(params[:retailer_id])
     @ring = Ring.find(params[:id])
     @ring.update(ring_params)
-    redirect_to retailer_path(@retailer)
+    redirect_to retailer_ring_path(@ring)
   end
 
   def create
@@ -34,8 +35,8 @@ class RingsController < ApplicationController
 
 
   def destroy
-    @retailer = Retailer.find(params[:retailer_id])
     @ring = Ring.find(params[:id])
+    @retailer =@ring.retailer
     @ring.destroy
     redirect_to retailer_path(@retailer)
   end

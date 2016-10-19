@@ -127,6 +127,10 @@
   <td><%=@ring.cut%></td>
 </tr>
   </table>
+  <%= link_to 'Edit', edit_ring_path(@ring) if @current_user == @retailer%>
+  <%= link_to 'Delete', ring_path(@ring), method: :delete, data:{confirm:'Are you sure?'} if @current_user == @retailer%>
+
+
   <div class="interest">
   <h3 class="store">For More Details</h3><br>
     <h3>Visit</h3>
@@ -136,5 +140,6 @@
   </div>
 
 </div>
+<%=link_to 'Back', retailer_path(@retailer) %>
   </body>
 </html>
