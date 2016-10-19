@@ -8,6 +8,7 @@
       width:1000px;
       position: relative;
       margin: auto;
+      text-align: center;
     }
     .ring{
       display:inline-block;
@@ -15,14 +16,25 @@
       height:263px;
       background-size: contain;
     }
+    .image{
+      display: inline-block;
+      margin: auto;
+    }
+    .box{
+      margin: auto;
+    }
     </style>
   </head>
   <body>
-    <h1>All Products</h1>
+    <div class="box">
     <% @rings.each do |ring| %>
+    <div class="image">
     <%=link_to image_tag(ring.img_url, class:"ring"), ring_path(ring)%>
+  </div>
     <!-- <%= link_to ring.shape, ring_path(ring) %> -->
     <%end%>
+  </div>
+  <div class="back"> <%=link_to"Back", retailers_path%></div>
 
   </body>
 </html>

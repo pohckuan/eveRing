@@ -1,8 +1,8 @@
 class RingsController < ApplicationController
 
   def show
-    @retailer = Retailer.find(params[:retailer_id])
     @ring = Ring.find(params[:id])
+    @retailer = @ring.retailer
   end
   def index
     @rings = Ring.all
