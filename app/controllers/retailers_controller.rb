@@ -36,7 +36,7 @@ end
 
 private
   def retailer_params
-    params.require(:retailer).permit(:name, :address, :phone,:img_url)
+    params.require(:retailer).permit(:name, :address, :phone,:img_url, :password)
   end
 
 

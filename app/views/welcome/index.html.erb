@@ -3,21 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style>
+    body{
+      background-image: url("https://www.ritani.com/wp-content/uploads/2015/02/ritani-engagement-rings.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .button{
+      display: inline-block;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+      text-decoration: none;
+      padding: 10px;
+    }
+    </style>
   </head>
   <body>
-    <h1>Welcome#index</h1>
-    <h2><%= link_to 'View Our Retailers', retailers_path%> </h2>
     <% if @current_user %>
+    <div>
       <%= link_to "Welcome, #{@current_user.name}!", retailer_path(@current_user) %>
       <%= link_to "Sign Out", session_path, method: :delete %>
     <% else %>
+    <div class="button">
       <%= link_to "Sign Up", new_retailer_path %>
+    </div>
+    <div class = "button">
       <%= link_to "Sign In", new_session_path %>
+    </div>
+    <div class = "button">
+      <%= link_to "Shop by Brands", retailers_path %>
+    </div>
+    <div class = "button">
+      <%= link_to "Shop All Products", rings_path %>
+    </div>
+
+
     <% end %>
 
-    <%= link_to "Retailers", retailers_path %>
-<%= link_to "Rings", rings_path %>
 
     <!-- <% if @current_user %>
   <%= link_to "Welcome, #{@current_user.name}!", retailer_path(@current_user) %>

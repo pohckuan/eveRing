@@ -1,28 +1,59 @@
-<h1>Become One of US!</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    body{
+      background-image: url("http://cdn.wallpapersafari.com/28/14/2Cm7Iw.jpg");
+      background-size: cover;
+    }
+    .new{
+      border-style: double;
+      width: 500px;
+      height: 500px;
+    }
+    p{
+      font-size: 20px;
+      padding: 10px;
+    }
+    form{
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="new">
+    <%= form_for @retailer do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </p>
 
-<%= form_for @retailer do |f| %>
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-</p>
+    <p>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+    </p>
 
-<p>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-</p>
+    <p>
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+    </p>
 
-<p>
-  <%= f.label :phone %>
-  <%= f.text_field :phone %>
-</p>
+    <p>
+      <%= f.label :img_url %>
+      <%= f.text_field :img_url%>
+    </p>
 
-<p>
-  <%= f.label :img_url %>
-  <%= f.text_field :img_url%>
-</p>
+    <p>
+      <%= f.submit %>
+    </p>
 
-<p>
-  <%= f.submit %>
-</p>
-
-<%end%>
+    <%end%>
+  </div>
+  </body>
+</html>

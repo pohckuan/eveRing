@@ -44,7 +44,8 @@
     padding-left: 10px;
     padding-right: 10px;
     margin:auto;
-  
+
+
   }
 
   </style>
@@ -55,12 +56,9 @@
     </div>
     <nav>
       <ul>
-        <li><%=link_to 'Products', rings_path%></li>
-        <li><%=link_to 'Retailers', retailers_path%></li>
-          <li><%=link_to'Join Us', new_retailer_path %></li>
+        <li><%=link_to 'Shop All Products'.upcase, rings_path%></li>
        </ul>
     </nav>
-    <h1>Jewelries Retailers</h1>
     <div class="retailers">
     <% @retailers.each do |retailer| %>
     <!-- <%= link_to retailer.name, retailer_path(retailer)%> -->

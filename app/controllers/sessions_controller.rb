@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
 def new
   @retailer = Retailer.new
-  @retailer.name = cookies[:name]
+  # @retailer.name = cookies[:name]
 end
   def create
   input_username = params[:retailer][:name]   # Save the username value submitted through the form
@@ -10,7 +10,6 @@ end
   # If the user exists, sign them in...
   if Retailer.exists?(name: input_username)
     @retailer = Retailer.find_by(name: input_username)  # Find that user
-
     # If the password submitted through the form is correct...
     if @retailer.password == params[:retailer][:password]
       flash[:notice]= "You're signed in!"
