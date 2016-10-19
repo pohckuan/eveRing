@@ -13,12 +13,10 @@ class RetailersController < ApplicationController
   end
 
   def new
-    redirect_to root_path unless @current_user
     @retailer = Retailer.new
   end
 
   def create
-    redirect_to root_path unless @current_user
     @retailer = Retailer.create!(retailer_params)
     redirect_to retailers_path
 end
