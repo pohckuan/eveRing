@@ -49,6 +49,10 @@ li{
     text-decoration: none;
     color: white;
   }
+  h2{
+    text-transform: uppercase;
+    text-decoration:underline;
+  }
 
   </style>
   </head>
@@ -61,6 +65,7 @@ li{
         <li><%=link_to 'Shop All Products'.upcase, rings_path%></li>
        </ul>
     </nav>
+    <h2>Retailers</h2>
     <div class="retailers">
     <% @retailers.each do |retailer| %>
     <%= link_to image_tag(retailer.img_url, class:"image"), retailer_path(retailer)%>

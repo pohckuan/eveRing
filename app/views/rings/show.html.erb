@@ -75,6 +75,17 @@
       margin-top: 0px;
       margin-bottom: 0px;
     }
+    .store{
+      padding:15px;
+      padding-top: 30px;
+      text-transform: uppercase;
+
+    }
+    .interest{
+      line-height: : 10px;
+      background-color: #e5e5ff;
+      margin-top: 30px;
+    }
     </style>
   </head>
   <body>
@@ -116,8 +127,9 @@
   <td><%=@ring.cut%></td>
 </tr>
   </table>
-  <div class="contact">
-    <h3> Contact Store </h3><br>
+  <div class="interest">
+  <h3 class="store">For More Details</h3><br>
+    <h3>Visit</h3>
     <%=@retailer.name%><br>
     <%=@retailer.phone%><br>
     <%=@retailer.address%>

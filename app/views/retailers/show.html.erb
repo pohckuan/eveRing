@@ -90,7 +90,8 @@
       <h1 class="company" id="engagement"> ENGAGEMENT RINGS </h1>
   </div>
   <h2 id="title">
-      Solitaire
+      Solitaire<br>
+      <%= link_to 'Click here to add product', new_retailer_ring_path(@retailer) if @current_user == @retailer %>
     </h2>
     <% @retailer.rings.each do |ring| %>
     <div class="square">
@@ -106,12 +107,10 @@
     <div class="back"> <%=link_to"Back", retailers_path%></div>
 
     <div>
-      <h3>Store Details</3><br>
-      <%= @retailer.phone %><br>
-      <%= @retailer.address %>
+      <h3>Store Details:</h3><br>
+      <p><%= @retailer.phone %><br></p>
+      <p><%= @retailer.address %><p>
     </div>
-    <%if @current_user == @retailer %>
-    <%= link_to 'Click here to add product', new_retailer_ring_path(@retailer) %>
-    <%end%>
+  </div>
   </body>
 </html>
