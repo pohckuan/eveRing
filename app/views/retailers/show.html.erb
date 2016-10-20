@@ -82,17 +82,39 @@
   .square:hover .links{
     display:block;
   }
+  
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  li{
+    display:block;
+    float:right;
+  }
+  ul{
+    height: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
     </style>
   </head>
   <body>
     <h2 class="company" id="name"><%=@retailer.name.upcase%></h2>
+    <nav>
+      <ul>
+        <li><%=link_to 'Homepage'.upcase, root_path%></li>
+      </ul>
+    </nav>
     <div class="banner">
       <h1 class="company" id="engagement"> ENGAGEMENT RINGS </h1>
   </div>
   <h2 id="title">
-      Solitaire<br>
-      <%= link_to 'Edit', edit_retailer_path(@retailer) if @current_user == @retailer%>
-      <%= link_to 'Delete', retailer_path(@retailer), method: :delete, data:{confirm:'Are you sure?'} if @current_user == @retailer%>
+      <%= link_to 'Edit Profile', edit_retailer_path(@retailer) if @current_user == @retailer%>
+      <%= link_to 'Delete Profile', retailer_path(@retailer), method: :delete, data:{confirm:'It is sad to see you leave. Thanks for using eveRing!'} if @current_user == @retailer%>
 
       <%= link_to 'Click here to add product', new_retailer_ring_path(@retailer) if @current_user == @retailer %>
     </h2>
