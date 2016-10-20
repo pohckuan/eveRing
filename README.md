@@ -11,3 +11,8 @@ Flash is added in the layout's application.html.erb file to alert and notice use
 Permission is added to the app. Users who are not signed in to the app do not have the permission to add, edit, and delete any products in the app. Authorized retailers can only add, edit, and delete the products in their own account.
 
 Users can shop for products by retailers or all at once.
+
+Unsolved Problems:
+Customers are not yet able to create accounts
+Create a favorites list to save products
+Checkout products
