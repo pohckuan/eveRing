@@ -8,6 +8,9 @@
 Retailer.destroy_all
 Ring.destroy_all
 
+# NHO: Great seed data! In the future you might be able to reduce the number of method calls by taking advantage of AR helper methods
+# and bulk creation, i.e. tiff.rings.create([{}, {}, {}])
+
 tiff = Retailer.create({name:"Tiff", password:"123456", img_url:"http://heavtryq.com/heartclipart/h8.white.b.png", phone:"(301) 657-8777", address:"The Collection at Chevy Chase, 5481 Wisconsin Ave, Chevy Chase, MD 20815"})
 ruby = Retailer.create({name:"Ruby",password:"123456", img_url:"http://rubythreads.com/images/happy-ruby-sticker.png",phone:" (202) 269-8540", address:"2441 Market St NE, Washington, DC 20018"})
 java = Retailer.create({name:"Java",password:"123456", img_url:"https://pbs.twimg.com/profile_images/2111210418/CoffeeLogo.jpg",phone:"(703) 415-5415", address:"Fashion Centre at Pentagon City, 1100 S Hayes St, Arlington, VA 22202" } )

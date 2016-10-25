@@ -1,5 +1,7 @@
 class RingsController < ApplicationController
-
+  # NHO: can you see a line this is repetitive in this controller?
+  # We can help DRY up this controller by using before_action methods to do common tasks such as
+  # find a retailer
   def show
     @ring = Ring.find(params[:id])
     @retailer = @ring.retailer
@@ -16,8 +18,7 @@ class RingsController < ApplicationController
 
   def edit
     @ring = Ring.find(params[:id])
-    # @retailer = Retailer.find(params[:retailer_id])
-    @retailer=@ring.retailer
+    @retailer = @ring.retailer
   end
 
   def update
@@ -36,7 +37,7 @@ class RingsController < ApplicationController
 
   def destroy
     @ring = Ring.find(params[:id])
-    @retailer =@ring.retailer
+    @retailer = @ring.retailer
     @ring.destroy
     redirect_to retailer_path(@retailer)
   end
@@ -45,5 +46,4 @@ class RingsController < ApplicationController
   def ring_params
     params.require(:ring).permit(:shape, :description, :carat, :clarity, :color, :cut, :price, :img_url)
   end
-
 end

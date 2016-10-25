@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+
+# NHO: While its not a factor at the scale of our apps now, as your Rails project grows
+# and you add more and more gems, its a good idea to come up with some system of organizing them.
+# Personally, I like group them by rails defaults, and custom added gems, sorted alphabetically...
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
